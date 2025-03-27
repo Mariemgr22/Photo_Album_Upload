@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="image-grid">
+        {% for photo in photos %}
+            <div class="image-item {% if forloop.first %}main-image{% endif %}">
+                <a href="{% url 'photo_detail' photo.pk %}">
+                    <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

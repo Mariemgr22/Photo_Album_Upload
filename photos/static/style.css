@@ -1,0 +1,18 @@
+/* Consistent thumbnail sizing */
+.thumbnail-container img {
+    transition: transform 0.3s ease;
+}
+
+.thumbnail-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
